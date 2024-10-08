@@ -1,0 +1,18 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    streams:
+      application-id: stream-app
+      default:
+        key:
+          serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+        value:
+          serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+
+
+application:
+  topic:
+    asset:
+      queue: "asset-queue"
+    central-kafka-stream:
+      queue: "central-kafka-stream-queue"
